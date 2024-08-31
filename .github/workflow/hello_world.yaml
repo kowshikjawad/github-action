@@ -1,0 +1,28 @@
+name: Hello world workflow
+
+on:
+  push:
+    branches:
+      -main
+  pull_request:
+    branches:
+       -main
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ununtu-latest
+    steps:
+     - uses:  actions/checkout
+     - name: hello world
+       run: echo "hello world"
+       shell: bash 
+
+  goodbye:
+    runs-on: ununtu-latest
+    steps:
+      -name: goodbye world
+       run: echo "goodbye world"
+       shell: bash 
+       
+
